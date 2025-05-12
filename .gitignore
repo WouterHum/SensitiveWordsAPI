@@ -1,0 +1,31 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Dependency directories
+packages/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Secrets (customize if needed)
+appsettings.json
