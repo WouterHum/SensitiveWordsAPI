@@ -41,7 +41,7 @@ namespace SensitiveWordsAPI.Middleware
                 // Check if the API key is present in the request headers
                 if (string.IsNullOrEmpty(apiKey) || !apiKey.Equals(_apiKey))
                 {
-                    // Return 401 if the API key is missing or invalid
+                    // Return 401 if the API key is missing or not valid
                     context.Response.StatusCode = StatusCodes.Status401Unauthorized;
                     await context.Response.WriteAsync("Unauthorized");
                     return;
