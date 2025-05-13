@@ -7,8 +7,7 @@ namespace SensitiveWordsAPI.Data
     /// DapperContext is a class that provides a connection to the database using Dapper.
     /// </summary>
     public class DapperContext
-    {
-        private readonly IConfiguration _configuration;
+    {        
         private readonly string _connectionString;
 
         /// <summary>
