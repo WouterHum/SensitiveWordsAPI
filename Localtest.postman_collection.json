@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "858665a6-e023-4d3c-a360-eceea3c8a656",
+		"name": "Localtest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37719771"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5013/api/internal/SensitiveWord",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Api-Key",
+						"value": "xJrzo6MuTKy0u0Tt",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5013/api/internal/SensitiveWord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5013",
+					"path": [
+						"api",
+						"internal",
+						"SensitiveWord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5013/api/internal/SensitiveWord Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Api-Key",
+						"value": "xJrzo6MuTKy0u0Tt",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \"word\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5013/api/internal/SensitiveWord",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5013",
+					"path": [
+						"api",
+						"internal",
+						"SensitiveWord"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5013/api/internal/SensitiveWord Sanitize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Api-Key",
+						"value": "xJrzo6MuTKy0u0Tt",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \"message\": \"Select * from\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5013/api/external/Sanitize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5013",
+					"path": [
+						"api",
+						"external",
+						"Sanitize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5013/api/internal/SensitiveWordGet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Api-Key",
+						"value": "xJrzo6MuTKy0u0Tt",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n  \"word\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5013/api/internal/SensitiveWord/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5013",
+					"path": [
+						"api",
+						"internal",
+						"SensitiveWord",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5013/api/internal/SensitiveWord Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Api-Key",
+						"value": "xJrzo6MuTKy0u0Tt",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 229,\r\n  \"word\": \"string1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5013/api/internal/SensitiveWord/229",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5013",
+					"path": [
+						"api",
+						"internal",
+						"SensitiveWord",
+						"229"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5013/api/internal/SensitiveWord Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Api-Key",
+						"value": "xJrzo6MuTKy0u0Tt",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5013/api/internal/SensitiveWord/232",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5013",
+					"path": [
+						"api",
+						"internal",
+						"SensitiveWord",
+						"232"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
