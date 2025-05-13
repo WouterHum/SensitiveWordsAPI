@@ -1,17 +1,29 @@
-﻿-- Create table if it doesn't exist
+﻿-- Optional: Create the database if it doesn't exist
+IF DB_ID('SensitiveWordsDb') IS NULL
+BEGIN
+    CREATE DATABASE SensitiveWordsDb;
+    PRINT 'Database SensitiveWordsDb created.';
+END
+ELSE
+BEGIN
+    PRINT 'Database SensitiveWordsDb already exists.';
+END
+
+
+-- Create table if it doesn't exist
 IF NOT EXISTS (
     SELECT * FROM INFORMATION_SCHEMA.TABLES 
-    WHERE TABLE_NAME = 'SensitiveWords'
+    WHERE TABLE_NAME = 'Sensitive_Words'
 )
 BEGIN
-    CREATE TABLE SensitiveWords (
+    CREATE TABLE Sensitive_Words (
         Id INT IDENTITY(1,1) PRIMARY KEY,
         Word NVARCHAR(100) NOT NULL UNIQUE
     );
 END
 
 -- Insert sensitive words
-INSERT INTO SensitiveWords (Word) VALUES 
+INSERT INTO Sensitive_Words (Word) VALUES 
 ('ACTION'), ('ADD'), ('ALL'), ('ALLOCATE'), ('ALTER'), ('ANY'), ('APPLICATION'),
 ('ARE'), ('AREA'), ('ASC'), ('ASSERTION'), ('ATOMIC'), ('AUTHORIZATION'), ('AVG'),
 ('BEGIN'), ('BY'), ('CALL'), ('CASCADE'), ('CASCADED'), ('CATALOG'), ('CHECK'),
